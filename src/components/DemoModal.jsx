@@ -23,7 +23,7 @@
 //
 // ============================================================
 
-const CALENDAR_URL = "" // ← PEGA AQUÍ TU LINK (cualquiera de las 3 opciones)
+const CALENDAR_URL = "https://calendly.com/admin-broadtvapp/30min" // ← PEGA AQUÍ TU LINK (cualquiera de las 3 opciones)
 
 // Cambia esto al nombre de la herramienta que uses: "cal.com" | "calendly" | "google"
 const TOOL_USED = "calendly"
