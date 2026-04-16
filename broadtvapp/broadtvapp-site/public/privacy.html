@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — BroadTVApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #ffad3f; --brand-dark: #f59d14;
+      --bg: #0e0e0e; --bg2: #1a1a1a; --bg3: #262626;
+      --text: #ffffff; --text2: #adaaaa; --text3: #767575;
+      --border: rgba(255,255,255,0.07);
+      --font-display: 'Manrope', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(14,14,14,0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; }
+    .nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo { width: 36px; height: 36px; background: linear-gradient(135deg, var(--brand), var(--brand-dark)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .nav-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--brand); letter-spacing: -0.02em; }
+    .lang-toggle { display: flex; background: var(--bg3); border-radius: 8px; padding: 3px; gap: 2px; }
+    .lang-btn { background: transparent; border: none; color: var(--text2); font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.875rem; border-radius: 6px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em; text-transform: uppercase; }
+    .lang-btn.active { background: var(--brand); color: #2a1700; }
+    .hero { padding: 4rem 2rem 2rem; max-width: 820px; margin: 0 auto; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,173,63,0.1); border: 1px solid rgba(255,173,63,0.25); color: var(--brand); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 20px; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+    .hero-sub { color: var(--text2); font-size: 0.95rem; max-width: 500px; margin: 0 auto 1rem; }
+    .updated { font-size: 0.8rem; color: var(--text3); letter-spacing: 0.05em; }
+    .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 2rem auto; max-width: 820px; }
+    .content { max-width: 820px; margin: 0 auto; padding: 0 2rem 6rem; }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.875rem; padding-left: 1rem; border-left: 3px solid var(--brand); }
+    .section p { color: var(--text2); margin-bottom: 0.75rem; font-size: 0.93rem; }
+    .section ul { list-style: none; margin-bottom: 0.75rem; }
+    .section ul li { color: var(--text2); font-size: 0.93rem; padding: 0.3rem 0 0.3rem 1.5rem; position: relative; }
+    .section ul li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; background: var(--brand); border-radius: 50%; }
+    .section a { color: var(--brand); text-decoration: none; }
+    .section a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(255,173,63,0.06); border: 1px solid rgba(255,173,63,0.15); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.25rem 0; }
+    .highlight-box p { color: var(--text); margin: 0; font-size: 0.9rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--bg3); color: var(--brand); font-family: var(--font-display); font-weight: 700; padding: 0.75rem 1rem; text-align: left; }
+    td { padding: 0.65rem 1rem; color: var(--text2); border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    footer { background: #000; border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    footer p { color: var(--text3); font-size: 0.8rem; }
+    footer a { color: var(--brand); text-decoration: none; }
+    @media (max-width: 600px) { nav { padding: 0.875rem 1rem; } .hero { padding: 2.5rem 1rem 1.5rem; } .content { padding: 0 1rem 4rem; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="https://broadtvapp.com">
+    <div class="nav-logo">📺</div>
+    <span class="nav-name">BroadTVApp</span>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Legal</div>
+  <h1 id="hero-title">Privacy Policy</h1>
+  <p class="hero-sub" id="hero-sub">How BroadTVApp collects, uses, and protects your personal information across all our applications and services.</p>
+  <p class="updated" id="hero-updated">Effective date: April 15, 2026 &nbsp;·&nbsp; Last updated: April 15, 2026</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+
+  <!-- ENGLISH -->
+  <div class="lang-content active" id="content-en">
+    <div class="section">
+      <h2>1. Introduction and Identity of the Controller</h2>
+      <p>BroadTVApp ("we", "us", "our") is a multi-tenant OTT streaming SaaS platform operated by BroadTVApp LLC. We provide branded mobile applications, web streaming platforms, Roku channels, and content management systems for religious channels, churches, and Hispanic media organizations.</p>
+      <p>This Privacy Policy governs the collection, use, storage, and disclosure of personal data across all BroadTVApp products and services, including Android and iOS mobile apps, Roku channel, web streaming platform, and CMS dashboard.</p>
+      <div class="highlight-box">
+        <p><strong>Data Controller:</strong> BroadTVApp LLC<br/>
+        Email: <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a><br/>
+        Website: <a href="https://broadtvapp.com">https://broadtvapp.com</a></p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>2. Information We Collect</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Data Type</th><th>Examples</th><th>Purpose</th></tr>
+          <tr><td>Account Data</td><td>Name, email address, password (hashed)</td><td>Account creation and authentication</td></tr>
+          <tr><td>Usage Data</td><td>Videos watched, play duration, playlists accessed</td><td>Content delivery and personalization</td></tr>
+          <tr><td>Device Data</td><td>Device type, OS version, app version</td><td>App compatibility and crash reporting</td></tr>
+          <tr><td>Location Data</td><td>Approximate country/region via IP address</td><td>Analytics only</td></tr>
+          <tr><td>Subscription Data</td><td>Subscription plan, account tier</td><td>Access control</td></tr>
+          <tr><td>Communications</td><td>Support requests, feedback</td><td>Customer support</td></tr>
+        </table>
+      </div>
+      <p>We do NOT collect: precise GPS location, contacts, camera or microphone data beyond video playback, or biometric data.</p>
+    </div>
+    <div class="section">
+      <h2>3. Legal Basis for Processing</h2>
+      <ul>
+        <li><strong>Contract performance:</strong> to provide the streaming service you signed up for.</li>
+        <li><strong>Legitimate interests:</strong> to improve our platform, detect fraud, and ensure security.</li>
+        <li><strong>Consent:</strong> for optional communications and non-essential analytics.</li>
+        <li><strong>Legal obligation:</strong> to comply with applicable laws and regulations.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>4. How We Use Your Information</h2>
+      <ul>
+        <li>Create and manage your user account.</li>
+        <li>Authenticate your identity and control access to content.</li>
+        <li>Stream video content and deliver a personalized experience.</li>
+        <li>Process subscription payments through secure third-party processors.</li>
+        <li>Generate anonymized, aggregated viewership analytics for channel operators.</li>
+        <li>Diagnose technical issues and improve platform performance.</li>
+        <li>Send transactional emails (account confirmation, password reset).</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+      <p>We do NOT use your data for targeted advertising. We do NOT sell, rent, or trade your personal information to any third party.</p>
+    </div>
+    <div class="section">
+      <h2>5. Data Sharing and Third-Party Services</h2>
+      <ul>
+        <li><strong>Cloudflare</strong> — CDN, video streaming (Cloudflare Stream), and file storage (Cloudflare R2).</li>
+        <li><strong>Supabase</strong> — Database hosting and authentication.</li>
+        <li><strong>Railway</strong> — API server hosting.</li>
+        <li><strong>Expo / EAS</strong> — Mobile app build and delivery infrastructure.</li>
+        <li><strong>Google Play / Apple App Store</strong> — App distribution platforms with their own privacy policies.</li>
+      </ul>
+      <p>Channel operators receive only aggregated, anonymized analytics — never your personal data.</p>
+    </div>
+    <div class="section">
+      <h2>6. Data Retention</h2>
+      <ul>
+        <li><strong>Active accounts:</strong> data is retained while your account is active.</li>
+        <li><strong>Deleted accounts:</strong> personal data is permanently deleted within 30 days of account deletion request.</li>
+        <li><strong>Usage logs:</strong> anonymized usage data may be retained for up to 12 months for analytics.</li>
+        <li><strong>Legal obligations:</strong> certain data may be retained longer if required by applicable law.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>7. Your Rights</h2>
+      <ul>
+        <li><strong>Right of access:</strong> request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to rectification:</strong> request correction of inaccurate or incomplete data.</li>
+        <li><strong>Right to erasure:</strong> request deletion of your account and all associated personal data.</li>
+        <li><strong>Right to data portability:</strong> receive your data in a structured, commonly used format.</li>
+        <li><strong>Right to object:</strong> object to processing based on legitimate interests.</li>
+        <li><strong>Right to withdraw consent:</strong> withdraw consent for optional processing at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a>. We will respond within 30 days.</p>
+    </div>
+    <div class="section">
+      <h2>8. Data Security</h2>
+      <ul>
+        <li>All data transmission uses HTTPS/TLS encryption.</li>
+        <li>Passwords are stored using bcrypt hashing — never in plain text.</li>
+        <li>Authentication uses JSON Web Tokens (JWT) with expiration.</li>
+        <li>Database access is restricted through role-based access controls.</li>
+        <li>Infrastructure is hosted on SOC 2 compliant cloud providers.</li>
+      </ul>
+      <p>In the event of a data breach affecting your rights, we will notify you as required by applicable law.</p>
+    </div>
+    <div class="section">
+      <h2>9. Children's Privacy</h2>
+      <p>BroadTVApp services are not directed to children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children. If you believe your child has provided us with personal information, contact us at <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a> and we will delete that information promptly.</p>
+    </div>
+    <div class="section">
+      <h2>10. Cookies and Local Storage</h2>
+      <p>Our web applications use local storage tokens to keep you logged in between sessions. We do NOT use third-party advertising cookies, social media pixels, or cross-site tracking technologies. Our mobile apps do not use persistent device identifiers for advertising purposes.</p>
+    </div>
+    <div class="section">
+      <h2>11. International Data Transfers</h2>
+      <p>Our infrastructure is based primarily in the United States. If you are located in the EU/EEA, your data may be transferred to and processed in the United States. We ensure appropriate safeguards through our service providers' compliance with applicable data transfer mechanisms.</p>
+    </div>
+    <div class="section">
+      <h2>12. California Privacy Rights (CCPA)</h2>
+      <p>California residents have the right to know what personal information we collect, the right to delete it, the right to opt-out of its sale (we do not sell personal information), and the right to non-discrimination. Submit CCPA requests to <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a>.</p>
+    </div>
+    <div class="section">
+      <h2>13. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy periodically. When we make material changes, we will update the effective date. For significant changes, we will notify registered users via email or in-app notification. Continued use of our services after the effective date constitutes acceptance of the updated policy.</p>
+    </div>
+    <div class="section">
+      <h2>14. Contact Us</h2>
+      <div class="highlight-box">
+        <p><strong>BroadTVApp LLC</strong><br/>
+        Privacy inquiries: <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a><br/>
+        Website: <a href="https://broadtvapp.com">https://broadtvapp.com</a><br/>
+        Platforms: Android · iOS · Roku · Web<br/><br/>
+        We respond to all privacy requests within <strong>30 days</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESPAÑOL -->
+  <div class="lang-content" id="content-es">
+    <div class="section">
+      <h2>1. Introducción e Identidad del Responsable</h2>
+      <p>BroadTVApp ("nosotros", "nos", "nuestro") es una plataforma SaaS de streaming OTT multi-tenant operada por BroadTVApp LLC. Proporcionamos aplicaciones móviles con marca propia, plataformas de streaming web, canales de Roku y sistemas de gestión de contenido para canales religiosos, iglesias y organizaciones de medios hispanos.</p>
+      <p>Esta Política de Privacidad rige la recopilación, uso, almacenamiento y divulgación de datos personales en todos los productos y servicios de BroadTVApp, incluyendo aplicaciones móviles Android e iOS, canal de Roku, plataforma web de streaming y panel CMS.</p>
+      <div class="highlight-box">
+        <p><strong>Responsable del Tratamiento:</strong> BroadTVApp LLC<br/>
+        Email: <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a><br/>
+        Sitio web: <a href="https://broadtvapp.com">https://broadtvapp.com</a></p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>2. Información que Recopilamos</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Tipo de Dato</th><th>Ejemplos</th><th>Propósito</th></tr>
+          <tr><td>Datos de Cuenta</td><td>Nombre, correo electrónico, contraseña (cifrada)</td><td>Creación de cuenta y autenticación</td></tr>
+          <tr><td>Datos de Uso</td><td>Videos vistos, duración de reproducción, listas accedidas</td><td>Entrega de contenido y personalización</td></tr>
+          <tr><td>Datos del Dispositivo</td><td>Tipo de dispositivo, versión OS, versión de app</td><td>Compatibilidad y reporte de errores</td></tr>
+          <tr><td>Datos de Ubicación</td><td>País/región aproximada vía dirección IP</td><td>Analítica únicamente</td></tr>
+          <tr><td>Datos de Suscripción</td><td>Plan de suscripción, nivel de cuenta</td><td>Control de acceso</td></tr>
+          <tr><td>Comunicaciones</td><td>Solicitudes de soporte, feedback</td><td>Atención al cliente</td></tr>
+        </table>
+      </div>
+      <p>No recopilamos: ubicación GPS precisa, contactos, datos de cámara o micrófono más allá de la reproducción de video, ni datos biométricos.</p>
+    </div>
+    <div class="section">
+      <h2>3. Base Legal para el Tratamiento</h2>
+      <ul>
+        <li><strong>Ejecución del contrato:</strong> para proveer el servicio de streaming que contrataste.</li>
+        <li><strong>Interés legítimo:</strong> para mejorar la plataforma, detectar fraudes y garantizar la seguridad.</li>
+        <li><strong>Consentimiento:</strong> para comunicaciones opcionales y analítica no esencial.</li>
+        <li><strong>Obligación legal:</strong> para cumplir con las leyes y regulaciones aplicables.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>4. Cómo Usamos Tu Información</h2>
+      <ul>
+        <li>Crear y gestionar tu cuenta de usuario.</li>
+        <li>Autenticar tu identidad y controlar el acceso al contenido.</li>
+        <li>Transmitir contenido de video y ofrecer una experiencia personalizada.</li>
+        <li>Procesar pagos de suscripción a través de procesadores seguros de terceros.</li>
+        <li>Generar analítica de audiencia anónima y agregada para operadores de canales.</li>
+        <li>Diagnosticar problemas técnicos y mejorar el rendimiento de la plataforma.</li>
+        <li>Enviar correos transaccionales (confirmación de cuenta, restablecimiento de contraseña).</li>
+        <li>Cumplir con obligaciones legales.</li>
+      </ul>
+      <p>NO usamos tus datos para publicidad dirigida. NO vendemos, alquilamos ni comercializamos tu información personal a terceros.</p>
+    </div>
+    <div class="section">
+      <h2>5. Compartición de Datos y Terceros</h2>
+      <ul>
+        <li><strong>Cloudflare</strong> — CDN, streaming de video (Cloudflare Stream) y almacenamiento de archivos (Cloudflare R2).</li>
+        <li><strong>Supabase</strong> — Alojamiento de base de datos y autenticación.</li>
+        <li><strong>Railway</strong> — Alojamiento del servidor API.</li>
+        <li><strong>Expo / EAS</strong> — Infraestructura de compilación y distribución de aplicaciones móviles.</li>
+        <li><strong>Google Play / Apple App Store</strong> — Plataformas de distribución con sus propias políticas de privacidad.</li>
+      </ul>
+      <p>Los operadores de canales reciben únicamente analítica agregada y anonimizada — nunca tus datos personales.</p>
+    </div>
+    <div class="section">
+      <h2>6. Retención de Datos</h2>
+      <ul>
+        <li><strong>Cuentas activas:</strong> los datos se conservan mientras tu cuenta esté activa.</li>
+        <li><strong>Cuentas eliminadas:</strong> los datos personales se eliminan permanentemente en 30 días.</li>
+        <li><strong>Registros de uso:</strong> los datos de uso anonimizados pueden conservarse hasta 12 meses.</li>
+        <li><strong>Obligaciones legales:</strong> ciertos datos pueden conservarse más tiempo si la ley lo requiere.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>7. Tus Derechos</h2>
+      <ul>
+        <li><strong>Derecho de acceso:</strong> solicitar una copia de tus datos personales.</li>
+        <li><strong>Derecho de rectificación:</strong> solicitar la corrección de datos inexactos.</li>
+        <li><strong>Derecho de supresión:</strong> solicitar la eliminación de tu cuenta y datos asociados.</li>
+        <li><strong>Derecho a la portabilidad:</strong> recibir tus datos en formato estructurado.</li>
+        <li><strong>Derecho de oposición:</strong> oponerte al tratamiento basado en interés legítimo.</li>
+        <li><strong>Derecho a retirar el consentimiento:</strong> retirar el consentimiento en cualquier momento.</li>
+      </ul>
+      <p>Para ejercer estos derechos, contáctanos en <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a>. Respondemos en 30 días.</p>
+    </div>
+    <div class="section">
+      <h2>8. Seguridad de los Datos</h2>
+      <ul>
+        <li>Toda la transmisión de datos usa cifrado HTTPS/TLS.</li>
+        <li>Las contraseñas se almacenan con hash bcrypt — nunca en texto plano.</li>
+        <li>La autenticación usa JSON Web Tokens (JWT) con vencimiento.</li>
+        <li>El acceso a la base de datos está restringido mediante control de acceso basado en roles.</li>
+        <li>La infraestructura está alojada en proveedores de nube compatibles con SOC 2.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>9. Privacidad de Menores</h2>
+      <p>Los servicios de BroadTVApp no están dirigidos a menores de 13 años (o 16 años en la UE). No recopilamos conscientemente información personal de niños. Si crees que tu hijo ha proporcionado información personal, contáctanos en <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a> y eliminaremos esa información de inmediato.</p>
+    </div>
+    <div class="section">
+      <h2>10. Cookies y Almacenamiento Local</h2>
+      <p>Nuestras aplicaciones web usan tokens de almacenamiento local para mantenerte conectado entre sesiones. No usamos cookies de publicidad de terceros, píxeles de redes sociales ni tecnologías de rastreo entre sitios. Nuestras apps móviles no usan identificadores de dispositivo persistentes para fines publicitarios.</p>
+    </div>
+    <div class="section">
+      <h2>11. Transferencias Internacionales de Datos</h2>
+      <p>Nuestra infraestructura está ubicada principalmente en los Estados Unidos. Si te encuentras en la UE/EEE, tus datos pueden ser transferidos y procesados en los Estados Unidos. Garantizamos las salvaguardas apropiadas a través del cumplimiento de nuestros proveedores de servicios con los mecanismos de transferencia de datos aplicables.</p>
+    </div>
+    <div class="section">
+      <h2>12. Derechos de Privacidad de California (CCPA)</h2>
+      <p>Los residentes de California tienen derecho a saber qué información personal recopilamos, a eliminarla, a optar por no venderla (no vendemos datos personales) y a no ser discriminados. Para solicitudes CCPA, contáctanos en <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a>.</p>
+    </div>
+    <div class="section">
+      <h2>13. Cambios a Esta Política</h2>
+      <p>Podemos actualizar esta Política de Privacidad periódicamente. Cuando realicemos cambios materiales, actualizaremos la fecha de vigencia. Para cambios significativos, notificaremos a los usuarios registrados por correo electrónico o notificación en la app. El uso continuado de nuestros servicios constituye la aceptación de la política actualizada.</p>
+    </div>
+    <div class="section">
+      <h2>14. Contacto</h2>
+      <div class="highlight-box">
+        <p><strong>BroadTVApp LLC</strong><br/>
+        Consultas de privacidad: <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a><br/>
+        Sitio web: <a href="https://broadtvapp.com">https://broadtvapp.com</a><br/>
+        Plataformas: Android · iOS · Roku · Web<br/><br/>
+        Respondemos todas las solicitudes en un plazo de <strong>30 días</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 BroadTVApp LLC. All rights reserved. &nbsp;·&nbsp; <a href="https://broadtvapp.com">broadtvapp.com</a> &nbsp;·&nbsp; <a href="mailto:admin@broadtvapp.com">admin@broadtvapp.com</a></p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('content-' + lang).classList.add('active');
+    document.getElementById('btn-' + lang).classList.add('active');
+    if (lang === 'en') {
+      document.getElementById('hero-title').textContent = 'Privacy Policy';
+      document.getElementById('hero-sub').textContent = 'How BroadTVApp collects, uses, and protects your personal information across all our applications and services.';
+      document.getElementById('hero-updated').textContent = 'Effective date: April 15, 2026 · Last updated: April 15, 2026';
+      document.title = 'Privacy Policy — BroadTVApp';
+    } else {
+      document.getElementById('hero-title').textContent = 'Política de Privacidad';
+      document.getElementById('hero-sub').textContent = 'Cómo BroadTVApp recopila, usa y protege tu información personal en todas nuestras aplicaciones y servicios.';
+      document.getElementById('hero-updated').textContent = 'Fecha de vigencia: 15 de abril de 2026 · Última actualización: 15 de abril de 2026';
+      document.title = 'Política de Privacidad — BroadTVApp';
+    }
+  }
+</script>
+</body>
+</html>
